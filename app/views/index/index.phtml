@@ -1,0 +1,52 @@
+    <div class="header">
+        <div class="container">
+            <span class="title">Пассворк</span>
+            <span class="description">Коробочная демо-версия</span>
+        </div>
+    </div>
+    
+    <div class="main">
+        <div class="centerbox">
+            <div class="box-header">
+                Демо-версия<br>коробочной версии<br>Пассворк
+            </div>
+            <div class="box-content">
+                Вы можете протестировать основные функции Пассворк на наших серверах.
+                <br><br>
+                Если вы хотите протестировать Пассворк на своем сервере, используйте <a href="https://www.docker.com/">Docker</a>. Инструкцию по установке мы отправили вам в письме. Полноценная версия Пассворк устанавливается без Docker.
+            </div>
+            <div class="button" ng-click="clickLogin()"><a href="#">Войти</a></div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <div class="left">© Passwork 2014–2018</div><div class="right">info@passwork.me</div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+function randomString(len, charSet) {
+    charSet = charSet || 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var randomString = '';
+    for (var i = 0; i < len; i++) {
+        var randomPoz = Math.floor(Math.random() * charSet.length);
+        randomString += charSet.substring(randomPoz,randomPoz+1);
+    }
+    return randomString;
+}
+
+var passworkApp=angular.module('passworkApp', []);
+passworkApp.controller('AppController', function($scope, $http) {
+    $scope.clickLogin = function (e) {
+            $http.post('/index/save', {"token": randomString(10)}).
+            then(function success(response) {
+                alert(response.data);
+            }, function error(response){
+                alert("Возникла ошибка");
+            }
+            );
+        return false;
+    }
+});
+</script>
