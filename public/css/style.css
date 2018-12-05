@@ -1,0 +1,120 @@
+@charset "utf-8";
+@font-face {
+	font-family: 'Museo Sans Cyrl';
+	src: local('Museo Sans Cyrl 500'), local('MuseoSansCyrl-500'), url('Museosanscyrl500.woff2') format('woff2'), url('Museosanscyrl500.woff') format('woff'), url('Museosanscyrl500.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+* {
+	text-decoration: none;
+}
+
+html, body {
+	width: 100%;
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+	background: #2580CC;
+	font: 15px 'Museo Sans Cyrl', Arial, Helvetica, sans-serif;
+	color: #fff;
+}
+
+.header {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 74px;
+	/*padding: 23px 0;*/
+	display: flex;
+}
+
+.container {
+	width: 1000px;
+	margin: auto;
+	/*position: relative;*/
+}
+
+.title {
+	font-size: 21px;
+	text-decoration: none;
+	padding-right: 25px;
+	font-weight: bold;
+}
+
+.description {
+	padding-left: 25px;
+	text-decoration: none;
+	border-left: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.main {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: auto;
+	height: 100%;
+	width: 100%;
+	display: flex;
+}
+
+.centerbox {
+	width: 450px;
+	background: #F5F5F5;
+	margin: auto;
+	color: #080808;
+	border-radius: 10px;
+	padding: 40px;
+}
+
+.box-header {
+	font-size: 32px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.box-content {
+	font-size: 13px;
+	text-decoration: none;
+	padding: 20px 0;
+}
+
+.button {
+	margin-top: 10px;
+	border-radius: 5px;
+	color: #fff;
+	text-decoration: none;
+	background: #2580CC;
+	padding: 9px 0;
+	outline: none;
+	width: 200px;
+	text-align: center;
+	cursor: pointer;
+}
+.button a {
+	color: #fff;
+	text-decoration: none;
+}
+.button a:hover { background: #2580CC; }
+.button a:active { background: #2580CC; }
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+}
+
+.left {
+	display: inline-block;
+	width: 50%;
+	text-align: left;
+}
+
+.right {
+	display: inline-block;
+	width: 50%;
+	text-align: right;
+}
